@@ -1,0 +1,31 @@
+{
+    "Login":{
+        "title":"Login Form",
+        "username":"UserName",
+        "password":"PassWord",
+        "button":"Login",
+        "error":"user or pass is false"
+
+    },
+    "Dashboard":{
+        "morning":"Good Morning",
+        "afternoon":"Good AfterNoon",
+        "night":"Good Night"
+    },
+    "SideBar":{
+        "Dashboard":"Dashboard",
+        "Weather":"Weather",
+        "Todo":"Todo",
+        "Profile":"Profile"
+    },
+    "TodoList":{
+        "placeholder":"Add your todo-list",
+        "button":"Add"
+    },
+    "Profile":{
+        "username":"UserName:",
+        "languages":"Language",
+        "farsi":"Farsi",
+        "english":"English"
+    }
+}

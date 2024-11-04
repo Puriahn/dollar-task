@@ -1,0 +1,30 @@
+{
+    "Login":{
+        "title":"فرم ورود",
+        "username":"نام کاربری",
+        "password":"رمز عبور",
+        "button":"ورود",
+        "error":"نام کاربری/رمز اشتباه"
+    },
+    "Dashboard":{
+        "morning":"صبح بخیر",
+        "afternoon":"ظهر بخیر",
+        "night":"شب بخیر"
+    },
+    "SideBar":{
+        "Dashboard":"داشبورد",
+        "Weather":"آب و هوا",
+        "Todo":"فهرست کارها",
+        "Profile":"پروفایل"
+    },
+    "TodoList":{
+        "placeholder":"اضافه کردن کار روزانه",
+        "button":"اضافه"
+    },
+    "Profile":{
+        "username":":نام کاربری",
+        "languages":"زبان",
+        "farsi":"فارسی",
+        "english":"انگلیسی"
+    }
+}
