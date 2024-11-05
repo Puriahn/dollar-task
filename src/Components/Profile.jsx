@@ -18,12 +18,12 @@ export default function Profile() {
   }
 
   return (
-    <div className="mt-10 flex flex-col gap-10">
+    <div className="mt-10 flex flex-col gap-10 ">
       <div className="text-skin-common border-b-2 py-4 border-skin-base">
         <div>{t("Profile.username")} </div>
         <div className="font-bold text-5xl text-skin-base">{userName}</div>
       </div>
-      <div className="space-y-4 space-x-6 text-skin-common border-b-2 w-96 py-4 border-skin-base">
+      <div className="space-y-4 space-x-6 text-skin-common border-b-2 w-64 md:w-96 py-4 border-skin-base">
         <div className="text-skin-common">{t("Profile.languages")}</div>
         <button
           onClick={() => handleLanguage("fa")}
@@ -38,7 +38,7 @@ export default function Profile() {
           {t("Profile.english")}
         </button>
       </div>
-      <div className="space-y-4 space-x-2 text-skin-common border-b-2 w-96 py-4 border-skin-base">
+      <div className="space-y-4 space-x-2 text-skin-common border-b-2 w-64 md:w-96 py-4 border-skin-base">
         <div className="text-skin-common">{t("Profile.theme")}</div>
         <div className="bg-gray-600 py-3 px-2 flex gap-2 rounded-lg">
         <button

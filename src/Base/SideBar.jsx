@@ -18,7 +18,7 @@ export default function SideBar() {
         dir="ltr"
         className="border-r-2 pt-20 text-center w-1/5 lg:block hidden"
       >
-        <ul className="flex flex-col gap-10 text-xl ">
+        <ul className="flex flex-col gap-y-10 text-xl ">
           {data.map((item) => (
             <li
               className={`transition-all  ${

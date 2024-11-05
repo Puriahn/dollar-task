@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Humburgur() {
   const [t, i18n] = useTranslation("global");
-  const data = ["Dashboard", "Weather", "Todo", "Profile"];
+  const data = ["Dashboard", "Weather", "Todo", "Profile",];
   const [isOpen, setIsOpen] = useState(false);
   function handleClick() {
     setIsOpen(!isOpen);
@@ -40,7 +40,7 @@ export default function Humburgur() {
         <svg
           fill="var(--color-text-base)"
           onClick={handleClick}
-          className="float-right hover:cursor-pointer "
+          className="float-right hover:cursor-pointer mt-3 mr-2 "
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
@@ -50,13 +50,13 @@ export default function Humburgur() {
         >
           <path d="M 38.982422 6.9707031 A 2.0002 2.0002 0 0 0 37.585938 7.5859375 L 24 21.171875 L 10.414062 7.5859375 A 2.0002 2.0002 0 0 0 8.9785156 6.9804688 A 2.0002 2.0002 0 0 0 7.5859375 10.414062 L 21.171875 24 L 7.5859375 37.585938 A 2.0002 2.0002 0 1 0 10.414062 40.414062 L 24 26.828125 L 37.585938 40.414062 A 2.0002 2.0002 0 1 0 40.414062 37.585938 L 26.828125 24 L 40.414062 10.414062 A 2.0002 2.0002 0 0 0 38.982422 6.9707031 z"></path>
         </svg>
-       
-        <ul className="flex pt-24 flex-col gap-5 md:gap-10 text-sm md:text-xl mt-10 ">
+
+        <ul className="flex pt-24 flex-col gap-y-5 md:gap-y-10 text-sm md:text-xl mt-10 ">
           {data.map((item) => (
             <li key={item}>
               <Link
                 onClick={handleCloseHumburgur}
-                className=" text-skin-invert font-bold hover:text-skin-base transition-all rounded-lg px-9 py-2 "
+                className=" text-skin-invert font-bold  hover:text-skin-base transition-all rounded-lg pl-4 md:pl-7  py-2 "
                 to={item}
               >
                 {t(`SideBar.${item}`)}

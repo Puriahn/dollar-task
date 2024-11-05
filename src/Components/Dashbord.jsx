@@ -16,7 +16,7 @@ export default function Dashboard() {
     message = t("Dashboard.night")
   }
   return (
-    <div className="mt-36 bg-skin-button-accent w-96 h-72 rounded-xl items-center justify-center text-center flex flex-col">
+    <div className="mt-36 bg-skin-button-accent w-64 md:w-96  h-72 rounded-xl items-center justify-center text-center flex flex-col">
       <div className="text-4xl mb-10 text-skin-common">{showTime}</div>
       <div className="text-3xl text-skin-common"> <span className="text-skin-base">{userName }</span> , {message}</div>
     </div>

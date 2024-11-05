@@ -47,7 +47,7 @@ export default function Weather() {
       <div className="mb-32">
         <select
           onChange={handleSelect}
-          className="w-64 font-semibold bg-skin-fill text-skin-common border border-skin-base text-sm rounded-lg justify-center mx-auto block p-2.5"
+          className="w-52 md:w-96 font-semibold bg-skin-fill text-skin-common border border-skin-base text-sm rounded-lg justify-center mx-auto block p-2.5"
           name="city"
           id="city"
         >
@@ -62,23 +62,21 @@ export default function Weather() {
         <>
           <Skeleton
             sx={{ bgcolor:"#ffffffc9" }}
-            className="mb-10 rounded-lg"
+            className="mb-10 rounded-lg w-64 md:w-96"
             variant="rectangular"
-            width={384}
+            
             height={40}
           />
           <Skeleton
             sx={{ bgcolor: "#ffffffc9" }}
-            className="mb-10 rounded-lg"
+            className="mb-10 rounded-lg w-64 md:w-96"
             variant="rectangular"
-            width={384}
             height={40}
           />
           <Skeleton
             sx={{ bgcolor: "#ffffffc9" }}
-            className="mb-10 rounded-lg"
+            className="mb-10 rounded-lg w-64 md:w-96"
             variant="rectangular"
-            width={384}
             height={40}
           />
         </>

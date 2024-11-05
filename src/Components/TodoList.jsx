@@ -31,7 +31,7 @@ export default function TodoList() {
         <input
           ref={inp}
           onChange={handleTodo}
-          className="w-48 md:w-72 mb-9 h-10 rounded-lg px-2"
+          className="w-48 md:w-72 mb-9 h-10 rounded-lg px-2 text-black"
           placeholder={t("TodoList.placeholder")}
         />
         <button
