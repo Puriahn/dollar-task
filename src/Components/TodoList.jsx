@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 const initalTodos = ["login", "dashboard", "weather", "todos", "profile"];
 
 export default function TodoList() {
-  const [t,i18n]=useTranslation("global")
+  const [t, i18n] = useTranslation("global");
   const inp = useRef();
   const [todos, setTodos] = useState(initalTodos);
   let x = "";
@@ -11,14 +11,12 @@ export default function TodoList() {
     x = [e.target.value, ...todos];
   }
   function handleAdd() {
-    if(x===""){
-      alert("field can't be emtpy")
-    }else{
+    if (x === "") {
+      alert("field can't be emtpy");
+    } else {
       setTodos(x);
       inp.current.value = "";
-
     }
-
   }
   function handleDelete(todo) {
     let x = todos.filter((item) => item != todo);
@@ -29,6 +27,7 @@ export default function TodoList() {
     <div className="relative overflow-x-auto text-lg mt-20">
       <div className="flex flex-row gap-5">
         <input
+          maxLength={20}
           ref={inp}
           onChange={handleTodo}
           className="w-48 md:w-72 mb-9 h-10 rounded-lg px-2 text-black"
@@ -43,7 +42,10 @@ export default function TodoList() {
       </div>
       <div className="border-skin-base border-2 py-6 rounded-lg">
         {todos.map((todo) => (
-          <div key={todo} className="justify-between flex border-b border-skin-base mb-2">
+          <div
+            key={todo}
+            className="justify-between flex border-b border-skin-base mb-2"
+          >
             <div className="flex mb-4">
               <input className="mx-4" type="checkbox" />
               <div className="mx-2 font-semibold text-skin-common">{todo}</div>
