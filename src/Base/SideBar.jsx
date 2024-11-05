@@ -20,16 +20,15 @@ export default function SideBar() {
       >
         <ul className="flex flex-col gap-10 text-xl ">
           {data.map((item) => (
-            <li key={item}>
-              <Link
-                onClick={() => handleSelected(item)}
-                className={
-                  isSelected === item
-                    ? "text-skin-base font-extrabold rounded-lg px-10 py-2"
-                    : "text-skin-common rounded-lg px-10 py-2 hover:opacity-65"
-                }
-                to={item}
-              >
+            <li
+              className={`transition-all  ${
+                isSelected === item
+                  ? "text-skin-base   rounded-lg px-10 py-2 scale-150"
+                  : "text-skin-common rounded-lg px-10 py-2 hover:opacity-65 hover:scale-125 "
+              }`}
+              key={item}
+            >
+              <Link onClick={() => handleSelected(item)} to={item}>
                 {t(`SideBar.${item}`)}
               </Link>
             </li>
