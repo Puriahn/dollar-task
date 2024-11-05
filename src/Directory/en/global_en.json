@@ -23,7 +23,7 @@
         "button":"Add"
     },
     "Profile":{
-        "username":"UserName:",
+        "username":"UserName",
         "languages":"Language",
         "farsi":"Farsi",
         "english":"English",

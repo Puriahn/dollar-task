@@ -56,7 +56,7 @@ export default function Humburgur() {
             <li key={item}>
               <Link
                 onClick={handleCloseHumburgur}
-                className=" text-skin-invert font-bold hover:opacity-65 rounded-lg px-9 py-2 "
+                className=" text-skin-invert font-bold hover:text-skin-base transition-all rounded-lg px-9 py-2 "
                 to={item}
               >
                 {t(`SideBar.${item}`)}
