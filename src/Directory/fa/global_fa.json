@@ -25,6 +25,11 @@
         "username":":نام کاربری",
         "languages":"زبان",
         "farsi":"فارسی",
-        "english":"انگلیسی"
+        "english":"انگلیسی",
+        "theme":"تم",
+        "theme1":"تم 1",
+        "theme2":"تم 2",
+        "theme3":"تم 3",
+        "theme4":"تم 4"
     }
 }

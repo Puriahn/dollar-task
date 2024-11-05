@@ -2,12 +2,15 @@ import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import SideBar from "../Base/SideBar";
 import Humburgur from "../Base/Humburgur";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { userNameActions } from "../Store/userName";
-import { useDispatch } from "react-redux"; 
+import { useDispatch, useSelector } from "react-redux"; 
 // import "./x.scss"
 
 export default function Root() {
+  const reduxTheme=useSelector(state=>state.user.theme)
+  const [theme,setTheme]=useState(localStorage.getItem("theme")||"")
+  let finalTheme=""
   const dispatch = useDispatch();
   const navigate = useNavigate();
   dispatch(userNameActions.set(localStorage.getItem("user")));
@@ -18,13 +21,19 @@ export default function Root() {
     ) {
       navigate("/Login");
     }
+    
+    
   }, []);
-
+  if (localStorage.getItem("theme")){
+      finalTheme=localStorage.getItem("theme")
+  }else{
+    finalTheme=reduxTheme
+  }
   return (
-    <>
+    <div className={finalTheme}>
       <div
         dir="ltr"
-        className="pt-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 "
+        className="pt-3 bg-skin-fill "
       >
         <Humburgur />
       </div>
@@ -48,12 +57,12 @@ export default function Root() {
         </div>
         <label class="nav__btn" for="menu-cb"></label>
       </nav> */}
-      <div className="flex py-4 h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 ">
+      <div className="flex py-4 h-screen bg-skin-fill ">
         <SideBar />
         <div className="pt-5 pl-5 mx-auto text-center">
           <Outlet />
         </div>
       </div>
-    </>
+    </div>
   );
 }

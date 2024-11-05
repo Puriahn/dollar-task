@@ -36,17 +36,17 @@ export default function TodoList() {
         />
         <button
           onClick={handleAdd}
-          className="bg-gray-300 rounded-lg h-10 px-4 hover:bg-gray-200"
+          className="bg-skin-hum font-bold rounded-lg h-10 px-4 hover:opacity-80"
         >
           {t("TodoList.button")}
         </button>
       </div>
-      <div className="bg-gray-50 py-6 rounded-lg">
+      <div className="border-skin-base border-2 py-6 rounded-lg">
         {todos.map((todo) => (
-          <div key={todo} className="justify-between flex border-b mb-2">
+          <div key={todo} className="justify-between flex border-b border-skin-base mb-2">
             <div className="flex mb-4">
               <input className="mx-4" type="checkbox" />
-              <div className="mx-2 font-semibold">{todo}</div>
+              <div className="mx-2 font-semibold text-skin-common">{todo}</div>
             </div>
             <div className="mb-4">
               <img

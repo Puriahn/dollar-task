@@ -48,7 +48,7 @@ export default function Weather() {
       <div className="mb-32">
         <select
           onChange={handleSelect}
-          className="w-64 font-semibold bg-gray-50 text-sm rounded-lg justify-center mx-auto block p-2.5"
+          className="w-64 font-semibold bg-skin-fill text-skin-common border border-skin-base text-sm rounded-lg justify-center mx-auto block p-2.5"
           name="city"
           id="city"
         >
@@ -62,21 +62,21 @@ export default function Weather() {
       {isLoading || start === 0 ? (
         <>
           <Skeleton
-            sx={{ bgcolor: "#801dab" }}
+            sx={{ bgcolor:"#ffffffc9" }}
             className="mb-10 rounded-lg"
             variant="rectangular"
             width={384}
             height={40}
           />
           <Skeleton
-            sx={{ bgcolor: "#801dab" }}
+            sx={{ bgcolor: "#ffffffc9" }}
             className="mb-10 rounded-lg"
             variant="rectangular"
             width={384}
             height={40}
           />
           <Skeleton
-            sx={{ bgcolor: "#801dab" }}
+            sx={{ bgcolor: "#ffffffc9" }}
             className="mb-10 rounded-lg"
             variant="rectangular"
             width={384}
@@ -84,7 +84,7 @@ export default function Weather() {
           />
         </>
       ) : (
-        <div className="flex flex-col gap-8 text-2xl font-bold text-white w-96">
+        <div className="flex flex-col gap-8 text-2xl font-bold text-skin-common w-64 md:w-96">
           <div className="flex justify-between items-center">{city} <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/city-block.png" alt="city-block"/></div>
           <div className="flex justify-between items-center">{weather.current["temp_c"]} C <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/thermometer.png" alt="thermometer"/></div>
           <div className="flex justify-between items-center">{weather.current.condition.text} <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/happy-cloud.png" alt="happy-cloud"/></div>

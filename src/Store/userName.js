@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-const initialuserNameState = { userName: ""};
+const initialuserNameState = { userName: "",theme:1};
 
 const userNameSlice = createSlice({
   name: "userName",
@@ -7,6 +7,9 @@ const userNameSlice = createSlice({
   reducers: {
     set(state, actions) {
       state.userName = actions.payload;
+    },
+    setTheme(state,actions){
+      state.theme=actions.payload
     }
   },
 });

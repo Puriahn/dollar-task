@@ -26,6 +26,11 @@
         "username":"UserName:",
         "languages":"Language",
         "farsi":"Farsi",
-        "english":"English"
+        "english":"English",
+        "theme":"Theme",
+        "theme1":"Theme1",
+        "theme2":"Theme2",
+        "theme3":"Theme3",
+        "theme4":"Theme4"
     }
 }
