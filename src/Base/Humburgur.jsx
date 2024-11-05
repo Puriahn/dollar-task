@@ -9,6 +9,9 @@ export default function Humburgur() {
   function handleClick() {
     setIsOpen(!isOpen);
   }
+  function handleCloseHumburgur(){
+    setIsOpen(false)
+  }
 
   return (
     <div className=" lg:hidden block z-40">
@@ -46,7 +49,7 @@ export default function Humburgur() {
           {data.map((item) => (
             <li key={item}>
               <Link
-                onClick={() => handleSelected(item)}
+              onClick={handleCloseHumburgur}
                 className=" text-skin-invert font-bold hover:opacity-65 rounded-lg px-9 py-2 "
                 to={item}
               >
