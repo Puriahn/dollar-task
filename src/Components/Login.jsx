@@ -1,20 +1,21 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux"; 
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const AllowedUsers = ["puria", "ali", "mahdi", "reza"];
 
 export default function Login() {
   const [t, i18n] = useTranslation("global");
-  const reduxTheme=useSelector(state=>state.user.theme)
-  const [theme,setTheme]=useState(localStorage.getItem("theme")||"")
-  let finalTheme=""
+  const reduxTheme = useSelector((state) => state.user.theme);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
+  let finalTheme = "";
 
   const navigate = useNavigate();
   const [userName, setUserName] = useState();
   const [pass, setPass] = useState();
   const [warning, setWarning] = useState(false);
+
 
   function handleForm(e) {
     e.preventDefault();
@@ -24,6 +25,9 @@ export default function Login() {
       navigate("/Dashboard");
     } else {
       setWarning(true);
+      setTimeout(() => {
+        setWarning(false)
+      }, 3000);
     }
   }
   function handleUser(e) {
@@ -36,16 +40,16 @@ export default function Login() {
   function handleLanguage(lang) {
     i18n.changeLanguage(lang);
   }
-  if (localStorage.getItem("theme")){
-    finalTheme=localStorage.getItem("theme")
-}else{
-  finalTheme=reduxTheme
-}
+  if (localStorage.getItem("theme")) {
+    finalTheme = localStorage.getItem("theme");
+  } else {
+    finalTheme = reduxTheme;
+  }
 
   return (
     <div className={finalTheme}>
       <div className="px-2 flex gap-5 pt-5 flex-col md:block bg-skin-fill justify-between">
-        <div className="flex  gap-5" >
+        <div className="flex  gap-5">
           <div className="text-skin-common text-xl">Languages:</div>
           <button
             onClick={() => handleLanguage("fa")}
@@ -82,7 +86,7 @@ export default function Login() {
               <input
                 onChange={handleUser}
                 name="username"
-                className="px-2 h-10 w-64 items-center mx-auto justify-center rounded-md"
+                className={`px-2 h-10 w-64 items-center mx-auto justify-center rounded-md ${warning&&"border-2 border-red-600"}`}
                 id="username"
                 type="text"
               />
@@ -97,7 +101,7 @@ export default function Login() {
               <input
                 onChange={handlePass}
                 name="password"
-                className="px-2 h-10 w-64 items-center mx-auto justify-center rounded-md"
+                className={`px-2 h-10 w-64 items-center mx-auto justify-center rounded-md ${warning&&"border-2 border-red-600"}`}
                 id="password"
                 type="password"
               />
@@ -106,7 +110,9 @@ export default function Login() {
               <button className="w-28 font-bold bg-skin-hum px-2 py-1 rounded-lg hover:opacity-80 ">
                 {t("Login.button")}
               </button>
-              {warning && <div className="text-skin-common">{t("Login.error")}</div>}
+              {warning && (
+                <div className="text-skin-warningg">{t("Login.error")}</div>
+              )}
             </div>
           </form>
         </div>

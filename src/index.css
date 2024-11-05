@@ -6,6 +6,7 @@
   :root {
     --color-text-base: #66fcf1;
     --color-text-common:#ffffff;
+    --color-text-warning:#FF0000;
     --color-text-muted: #c5c6c7;
     --color-text-invert: #0b0c10;
 
@@ -20,6 +21,7 @@
   .themeOne{
     --color-text-base: #D83F87;
     --color-text-common:#ffffff;
+    --color-text-warning:#FF0000;
     --color-text-muted: #A4B3B6;
     --color-text-invert: #0b0c10;
 
@@ -34,6 +36,7 @@
   .themeSecond{
     --color-text-base: #86c232;
     --color-text-common:#ffffff;
+    --color-text-warning:#FF0000;
     --color-text-muted: #474b4f;
     --color-text-invert: #0b0c10;
 
@@ -50,6 +53,7 @@
     --color-text-common:#ffffff;
     --color-text-muted: #17252a;
     --color-text-invert: #0b0c10;
+    --color-text-warning:#FF0000;
 
     --color-fill-humburgur: #def2f1;
     --color-fill: #3aafa9;
@@ -58,6 +62,7 @@
     --color-button-hover: #15161c;
 
     --color-border:#c5c6c7;
+
   }
 }
 

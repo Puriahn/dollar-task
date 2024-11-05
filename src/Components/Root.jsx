@@ -12,8 +12,8 @@ export default function Root() {
   let finalTheme=""
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  dispatch(userNameActions.set(localStorage.getItem("user")));
   useEffect(() => {
+    dispatch(userNameActions.set(localStorage.getItem("user")));
     if (
       localStorage.getItem("user") === undefined ||
       localStorage.getItem("user") === null
