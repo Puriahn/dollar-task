@@ -28,6 +28,8 @@ export default function Root() {
   }else{
     finalTheme=reduxTheme
   }
+  
+  
   return (
     <div className={finalTheme}>
       <div

@@ -2,19 +2,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { userNameActions } from "../Store/userName";
 
-
 export default function Profile() {
   const userName = useSelector((state) => state.user.userName);
   const [t, i18n] = useTranslation("global");
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
 
   function handleLanguage(lang) {
-    localStorage.setItem("language",lang)
+    localStorage.setItem("language", lang);
     i18n.changeLanguage(lang);
   }
-  function handleTheme(id){
-    dispatch(userNameActions.setTheme(id))
-    localStorage.setItem("theme",id)
+  function handleTheme(id) {
+    dispatch(userNameActions.setTheme(id));
+    localStorage.setItem("theme", id);
   }
 
   return (
@@ -41,31 +40,31 @@ export default function Profile() {
       <div className="space-y-4 space-x-2 text-skin-common border-b-2 w-64 md:w-96 py-4 border-skin-base">
         <div className="text-skin-common">{t("Profile.theme")}</div>
         <div className="bg-gray-600 py-3 px-2 flex gap-2 rounded-lg">
-        <button
-          onClick={() => handleTheme("")}
-          className="text-[#66fcf1] font-semibold hover:opacity-80 w-20 rounded-lg border-2 bg-[#1f2833] border-[#c5c6c7] px-1 py-1"
-        >
-          {t("Profile.theme1")}
-        </button>
-        <button
-          onClick={() => handleTheme("themeOne")}
-          className="text-[#D83F87] font-semibold hover:opacity-80 w-20 rounded-lg border-2 bg-[#44318D] border-[#a84fb0] px-1 py-1"
-        >
-          {t("Profile.theme2")}
-        </button>
-        <button
-          onClick={() => handleTheme("themeSecond")}
-          className="text-[#86c232] font-semibold hover:opacity-80 w-20 rounded-lg border-2 bg-[#222629] border-[#8cc298] px-1 py-1"
-        >
-          {t("Profile.theme3")}
-        </button>
-        <button
-          onClick={() => handleTheme("themeThird")}
-          className="text-[#47544a]  font-semibold hover:opacity-80 w-20 rounded-lg border-2 bg-[#3aafa9] border-[#c5c6c7] px-1 py-1"
-        >
-          {t("Profile.theme4")}
-        </button>
-        </div>
+          <button
+            onClick={() => handleTheme("")}
+            className="text-[#66fcf1] font-semibold hover:opacity-80 w-20 rounded-lg border-2 bg-[#1f2833] border-[#c5c6c7] px-1 py-1"
+          >
+            {t("Profile.theme1")}
+          </button>
+          <button
+            onClick={() => handleTheme("theme1")}
+            className="text-[#D83F87] font-semibold hover:opacity-80 w-20 rounded-lg border-2 bg-[#44318D] border-[#a84fb0] px-1 py-1"
+          >
+            {t("Profile.theme2")}
+          </button>
+          <button
+            onClick={() => handleTheme("theme2")}
+            className="text-[#86c232] font-semibold hover:opacity-80 w-20 rounded-lg border-2 bg-[#222629] border-[#8cc298] px-1 py-1"
+          >
+            {t("Profile.theme3")}
+          </button>
+          <button
+            onClick={() => handleTheme("theme3")}
+            className="text-[#47544a]  font-semibold hover:opacity-80 w-20 rounded-lg border-2 bg-[#3aafa9] border-[#c5c6c7] px-1 py-1"
+          >
+            {t("Profile.theme4")}
+          </button>
+        </div>{" "}
       </div>
     </div>
   );

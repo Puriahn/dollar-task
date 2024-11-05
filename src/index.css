@@ -18,7 +18,7 @@
 
     --color-border:#c5c6c7;
   }
-  .themeOne{
+  .theme1{
     --color-text-base: #D83F87;
     --color-text-common:#ffffff;
     --color-text-warning:#FF0000;
@@ -33,7 +33,7 @@
 
     --color-border:#a84fb0;
   }
-  .themeSecond{
+  .theme2{
     --color-text-base: #86c232;
     --color-text-common:#ffffff;
     --color-text-warning:#FF0000;
@@ -48,7 +48,7 @@
 
     --color-border:#8cc298;
   }
-  .themeThird{
+  .theme3{
     --color-text-base: #47544a;
     --color-text-common:#ffffff;
     --color-text-muted: #17252a;
