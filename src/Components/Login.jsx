@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import { useDispatch, useSelector } from "react-redux"; 
 import { useNavigate } from "react-router-dom";
 
 const AllowedUsers = ["puria", "ali", "mahdi", "reza"];
 
 export default function Login() {
   const [t, i18n] = useTranslation("global");
+  const reduxTheme=useSelector(state=>state.user.theme)
+  const [theme,setTheme]=useState(localStorage.getItem("theme")||"")
+  let finalTheme=""
 
   const navigate = useNavigate();
   const [userName, setUserName] = useState();
@@ -33,9 +36,14 @@ export default function Login() {
   function handleLanguage(lang) {
     i18n.changeLanguage(lang);
   }
+  if (localStorage.getItem("theme")){
+    finalTheme=localStorage.getItem("theme")
+}else{
+  finalTheme=reduxTheme
+}
 
   return (
-    <div className="themeThird">
+    <div className={finalTheme}>
       <div className="px-2 flex gap-5 pt-5 flex-col md:block bg-skin-fill justify-between">
         <div className="flex  gap-5" >
           <div className="text-skin-common text-xl">Languages:</div>
