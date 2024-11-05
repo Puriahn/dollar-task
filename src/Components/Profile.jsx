@@ -9,6 +9,7 @@ export default function Profile() {
   const dispatch=useDispatch()
 
   function handleLanguage(lang) {
+    localStorage.setItem("language",lang)
     i18n.changeLanguage(lang);
   }
   function handleTheme(id){

@@ -42,7 +42,6 @@ export default function Weather() {
         console.log(error);
       });
   }
-  console.log(start)
   return (
     <div>
       <div className="mb-32">

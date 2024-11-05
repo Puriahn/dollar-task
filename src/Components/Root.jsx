@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Root() {
   const reduxTheme=useSelector(state=>state.user.theme)
-  const [theme,setTheme]=useState(localStorage.getItem("theme")||"")
   let finalTheme=""
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -33,7 +32,7 @@ export default function Root() {
     <div className={finalTheme}>
       <div
         dir="ltr"
-        className="pt-3 bg-skin-fill "
+        className="pt-3 transition-all duration-1000 bg-skin-fill "
       >
         <Humburgur />
       </div>
@@ -57,7 +56,7 @@ export default function Root() {
         </div>
         <label class="nav__btn" for="menu-cb"></label>
       </nav> */}
-      <div className="flex py-4 h-screen bg-skin-fill ">
+      <div className="flex py-4 h-screen transition-all duration-1000 bg-skin-fill [text-wrap:balance] text-transparent ">
         <SideBar />
         <div className="pt-5 pl-5 mx-auto text-center">
           <Outlet />

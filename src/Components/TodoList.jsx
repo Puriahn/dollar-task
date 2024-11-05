@@ -36,7 +36,7 @@ export default function TodoList() {
         />
         <button
           onClick={handleAdd}
-          className="bg-skin-hum font-bold rounded-lg h-10 px-4 hover:opacity-80"
+          className="bg-skin-hum text-skin-invert font-bold rounded-lg h-10 px-4 hover:opacity-80"
         >
           {t("TodoList.button")}
         </button>
